@@ -16,7 +16,7 @@ public class PointTest{
        frame.show();
     }
 }
-class ThisFrame extends JFrame implements ActionListener { //Implementing action listener interface
+class ThisFrame extends JFrame implements ActionListener {
     static Scanner sc= new Scanner(System.in);
     Double x1, y1;
     JLabel label;
@@ -56,7 +56,7 @@ public void paint(Graphics g) {
     g2d.draw(polygon); // Drawing Polygon having 5 corners of given coordinates
 }
         @Override
-    public void actionPerformed(ActionEvent e) { // Overriding action performed methods
+    public void actionPerformed(ActionEvent e) {
             Graphics g= getGraphics();
             Graphics2D g2d = (Graphics2D) g;
             g2d.setStroke(new BasicStroke(2));

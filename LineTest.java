@@ -16,7 +16,7 @@ public class LineTest {
         frame.show();
     }
 }
- class NewFrame extends JFrame implements ActionListener {  // Implementing mouse listener interface
+ class NewFrame extends JFrame implements ActionListener {
     static Scanner sc= new Scanner(System.in);
     Line2D line;
     Polygon polygon;
@@ -27,7 +27,7 @@ public class LineTest {
     JLabel label;
      public static final int WIDTH = 400;
     public static final int HEIGHT = 400;
-    public NewFrame()  // Creating a new farame
+    public NewFrame()
     {
        setTitle("Testing Line Inside A Polygon");
        setSize(WIDTH, HEIGHT);
@@ -41,9 +41,9 @@ public class LineTest {
        panel.add(button);
        panel.add(label);
        contentPane.add(panel);
-       button.addActionListener(this); // Registering listener interface
+       button.addActionListener(this);
     }
-    public void readingLine () { // Reading coordinate for line
+    public void readingLine () {
         System.out.println("Enter initial x1 Coordinates of line");
         x1 = sc.nextDouble();
         System.out.println("Enter initial y1 Coordinates of line");
@@ -75,13 +75,29 @@ public class LineTest {
        public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g1d= (Graphics2D) g;
-                  g1d.setStroke(new BasicStroke(2.0f));
-           g1d.setColor(new Color ((int) (Math.random()*256),(int) (Math.random()*256),(int) (Math.random()*256)));// Generating random Color
-          polygon= new Polygon (new int [] {400,500,550,550,400}, new int[] {300,250,300,350,400},5);// Drawing a polygon
-          g1d.drawPolygon(polygon );// Drawing Polygon
+          /* System.out.println("Enter Number of Side of your Polygon");
+           n = sc.nextInt();
+           int alx []= new int [n];
+           int aly []= new int [n];
+           System.out.println("Enter X  coordinates of each side");
+           for (int i = 0; i < n; i++) {
+               alx[i]=sc.nextInt();
+
+           }
+           System.out.println("Enter Y coordinates of Each Side");
+           for (int i=0;i<n;i++)
+           {
+               aly[i]=sc.nextInt();
+
+           }*/
+
+           g1d.setStroke(new BasicStroke(2.0f));
+           g1d.setColor(new Color ((int) (Math.random()*256),(int) (Math.random()*256),(int) (Math.random()*256)));
+          polygon= new Polygon (new int [] {400,500,550,550,400}, new int[] {300,250,300,350,400},5);
+          g1d.drawPolygon(polygon );
     }
       @Override
-    public void actionPerformed(ActionEvent e) {  // Overriding actionperformed
+    public void actionPerformed(ActionEvent e) {  // Checking Conditions
         Graphics g= getGraphics();
         Graphics2D g2d = (Graphics2D) g;
         g2d.setStroke(new BasicStroke(2));

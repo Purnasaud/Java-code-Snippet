@@ -23,8 +23,7 @@ class MouseFrame extends JFrame implements MouseListener {
         Container cp = getContentPane();
         cp.add(panel);// Adding Panel to Contentpane
         setVisible(true);
-		setResizable(true);
-        addMouseListener(this); // Registering listener interface
+        addMouseListener(this);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     @Override
@@ -43,7 +42,7 @@ class MouseFrame extends JFrame implements MouseListener {
       
 	}
     @Override
-    public void mousePressed(MouseEvent e) { // Overrriding Action performed
+    public void mousePressed(MouseEvent e) {
 
     }
 
